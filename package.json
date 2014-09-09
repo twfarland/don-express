@@ -1,0 +1,8 @@
+{ "name": "don express"
+, "version": "0.1.0"
+, "author": "Tim Farland <twfarland@gmail.com>"
+, "repository": "https://github.com/twfarland/don-express"
+, "description": "Don.js templating engine helper for express"
+, "homepage": "http://github.com/twfarland/don-express"
+, "main": "lib/don-express"
+}
