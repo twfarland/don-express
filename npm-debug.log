@@ -1,0 +1,100 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'publish' ]
+2 info using npm@1.4.23
+3 info using node@v0.10.31
+4 verbose publish [ '.' ]
+5 verbose cache add [ '.', null ]
+6 verbose cache add name=undefined spec="." args=[".",null]
+7 verbose parsed url { protocol: null,
+7 verbose parsed url   slashes: null,
+7 verbose parsed url   auth: null,
+7 verbose parsed url   host: null,
+7 verbose parsed url   port: null,
+7 verbose parsed url   hostname: null,
+7 verbose parsed url   hash: null,
+7 verbose parsed url   search: null,
+7 verbose parsed url   query: null,
+7 verbose parsed url   pathname: '.',
+7 verbose parsed url   path: '.',
+7 verbose parsed url   href: '.' }
+8 silly lockFile 3a52ce78- .
+9 verbose lock . /Users/tf/.npm/3a52ce78-.lock
+10 verbose tar pack [ '/Users/tf/.npm/don-express/0.1.0/package.tgz', '.' ]
+11 verbose tarball /Users/tf/.npm/don-express/0.1.0/package.tgz
+12 verbose folder .
+13 info prepublish don-express@0.1.0
+14 silly lockFile 1f1177db-tar tar://.
+15 verbose lock tar://. /Users/tf/.npm/1f1177db-tar.lock
+16 silly lockFile 340d2de4-pm-don-express-0-1-0-package-tgz tar:///Users/tf/.npm/don-express/0.1.0/package.tgz
+17 verbose lock tar:///Users/tf/.npm/don-express/0.1.0/package.tgz /Users/tf/.npm/340d2de4-pm-don-express-0-1-0-package-tgz.lock
+18 silly lockFile 1f1177db-tar tar://.
+19 silly lockFile 1f1177db-tar tar://.
+20 silly lockFile 340d2de4-pm-don-express-0-1-0-package-tgz tar:///Users/tf/.npm/don-express/0.1.0/package.tgz
+21 silly lockFile 340d2de4-pm-don-express-0-1-0-package-tgz tar:///Users/tf/.npm/don-express/0.1.0/package.tgz
+22 silly lockFile 620b965a-tf-npm-don-express-0-1-0-package /Users/tf/.npm/don-express/0.1.0/package
+23 verbose lock /Users/tf/.npm/don-express/0.1.0/package /Users/tf/.npm/620b965a-tf-npm-don-express-0-1-0-package.lock
+24 silly lockFile 620b965a-tf-npm-don-express-0-1-0-package /Users/tf/.npm/don-express/0.1.0/package
+25 silly lockFile 620b965a-tf-npm-don-express-0-1-0-package /Users/tf/.npm/don-express/0.1.0/package
+26 silly lockFile 3a52ce78- .
+27 silly lockFile 3a52ce78- .
+28 silly publish { name: 'don-express',
+28 silly publish   version: '0.1.0',
+28 silly publish   author: { name: 'Tim Farland', email: 'twfarland@gmail.com' },
+28 silly publish   repository: { type: 'git', url: 'https://github.com/twfarland/don-express' },
+28 silly publish   description: 'Don.js templating engine helper for express',
+28 silly publish   homepage: 'http://github.com/twfarland/don-express',
+28 silly publish   main: 'lib/don-express',
+28 silly publish   readme: '#don-express\n\nExpress helpers for the don.js templating library\n\n    npm install don-express\n\nA contrived example:\n\n###app.js\n\n```javascript\nvar fs           = require(\'fs\');\nvar express      = require(\'express\');\nvar app          = express();\n\nvar don          = require(\'don\');\nvar donExpress   = require(\'don-express\')(app, fs, don, __dirname + \'/views\');\n\napp.use(donExpress.renderer);\n\napp.get(\'/\', function (req, res) {\n    res.locals.title = \'Hello\';\n    res.locals.text  = \'World\';\n    res.render(\'layout\', { partials: { content: \'inner\' }});\n});\n\napp.listen(3000);\n```\n    \n###views/layout.js\n\n```javascript\nmodule.exports = function (data) {\n    return [\'html\',\n        [\'head\',\n            [\'title\', data.title]],\n        [\'body\',  \n            [\'h1\', data.title],\n            data.content && data.content(data)]];\n};\n```\n\n###views/inner.js\n\n```javascript\nmodule.exports = function (data) {\n    return [\'p\', data.text];\n};\n```\n',
+28 silly publish   readmeFilename: 'README.md',
+28 silly publish   gitHead: '9a4106e7fa1059b655e71cfe8d72d6f3ad5e3044',
+28 silly publish   bugs: { url: 'https://github.com/twfarland/don-express/issues' },
+28 silly publish   _id: 'don-express@0.1.0',
+28 silly publish   scripts: {},
+28 silly publish   _shasum: '76d2074b67f19fa3aa13a44cccb57f7c00247cd1',
+28 silly publish   _from: '.' }
+29 verbose request where is /don-express
+30 verbose request registry https://registry.npmjs.org/
+31 verbose request id 70b714aec3a39f13
+32 verbose url raw /don-express
+33 verbose url resolving [ 'https://registry.npmjs.org/', './don-express' ]
+34 verbose url resolved https://registry.npmjs.org/don-express
+35 verbose request where is https://registry.npmjs.org/don-express
+36 info trying registry request attempt 1 at 13:39:49
+37 http PUT https://registry.npmjs.org/don-express
+38 http 403 https://registry.npmjs.org/don-express
+39 verbose headers { date: 'Sat, 20 Sep 2014 01:39:50 GMT',
+39 verbose headers   server: 'CouchDB/1.5.0 (Erlang OTP/R14B04)',
+39 verbose headers   'content-type': 'application/json',
+39 verbose headers   'cache-control': 'max-age=60',
+39 verbose headers   'content-length': '3227',
+39 verbose headers   'accept-ranges': 'bytes',
+39 verbose headers   via: '1.1 varnish',
+39 verbose headers   'x-served-by': 'cache-ak102-NZ',
+39 verbose headers   'x-cache': 'MISS',
+39 verbose headers   'x-cache-hits': '0',
+39 verbose headers   'x-timer': 'S1411177189.407820,VS0,VE757',
+39 verbose headers   'keep-alive': 'timeout=10, max=50',
+39 verbose headers   connection: 'Keep-Alive' }
+40 error publish Failed PUT 403
+41 error Error: forbidden cannot modify pre-existing version: 0.1.0
+41 error old={"name":"don-express","version":"0.1.0","author":{"name":"Tim Farland","email":"twfarland@gmail.com"},"repository":{"type":"git","url":"https://github.com/twfarland/don-express"},"description":"Don.js templating engine helper for express","homepage":"http://github.com/twfarland/don-express","main":"lib/don-express","gitHead":"d0d92a8f9260044bab99fd50ebbc125ff92af80c","bugs":{"url":"https://github.com/twfarland/don-express/issues"},"_id":"don-express@0.1.0","scripts":{},"_shasum":"7bfbf187a28aa3d3978d746bd7f5b5473e0bfa48","_from":"don-express/","_npmVersion":"1.4.23","_npmUser":{"name":"twfarland","email":"twfarland@gmail.com"},"maintainers":[{"name":"twfarland","email":"twfarland@gmail.com"}],"dist":{"shasum":"7bfbf187a28aa3d3978d746bd7f5b5473e0bfa48","tarball":"http://registry.npmjs.org/don-express/-/don-express-0.1.0.tgz"}}
+41 error new={"name":"don-express","version":"0.1.0","author":{"name":"Tim Farland","email":"twfarland@gmail.com"},"repository":{"type":"git","url":"https://github.com/twfarland/don-express"},"description":"Don.js templating engine helper for express","homepage":"http://github.com/twfarland/don-express","main":"lib/don-express","readme":"#don-express\u000a\u000aExpress helpers for the don.js templating library\u000a\u000a    npm install don-express\u000a\u000aA contrived example:\u000a\u000a###app.js\u000a\u000a```javascript\u000avar fs           = require('fs');\u000avar express      = require('express');\u000avar app          = express();\u000a\u000avar don          = require('don');\u000avar donExpress   = require('don-express')(app, fs, don, __dirname + '/views');\u000a\u000aapp.use(donExpress.renderer);\u000a\u000aapp.get('/', function (req, res) {\u000a    res.locals.title = 'Hello';\u000a    res.locals.text  = 'World';\u000a    res.render('layout', { partials: { content: 'inner' }});\u000a});\u000a\u000aapp.listen(3000);\u000a```\u000a    \u000a###views/layout.js\u000a\u000a```javascript\u000amodule.exports = function (data) {\u000a    return ['html',\u000a        ['head',\u000a            ['title', data.title]],\u000a        ['body',  \u000a            ['h1', data.title],\u000a            data.content && data.content(data)]];\u000a};\u000a```\u000a\u000a###views/inner.js\u000a\u000a```javascript\u000amodule.exports = function (data) {\u000a    return ['p', data.text];\u000a};\u000a```\u000a","readmeFilename":"README.md","gitHead":"9a4106e7fa1059b655e71cfe8d72d6f3ad5e3044","bugs":{"url":"https://github.com/twfarland/don-express/issues"},"_id":"don-express@0.1.0","scripts":{},"_shasum":"76d2074b67f19fa3aa13a44cccb57f7c00247cd1","_from":".","_npmVersion":"1.4.23","_npmUser":{"name":"twfarland","email":"twfarland@gmail.com"},"maintainers":[{"name":"twfarland","email":"twfarland@gmail.com"}],"dist":{"shasum":"76d2074b67f19fa3aa13a44cccb57f7c00247cd1","tarball":"http://registry.npmjs.org/don-express/-/don-express-0.1.0.tgz"}}: don-express
+41 error     at RegClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:300:14)
+41 error     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:238:65)
+41 error     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:123:22)
+41 error     at Request.emit (events.js:98:17)
+41 error     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:893:14)
+41 error     at Request.emit (events.js:117:20)
+41 error     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:844:12)
+41 error     at IncomingMessage.emit (events.js:117:20)
+41 error     at _stream_readable.js:943:16
+41 error     at process._tickCallback (node.js:419:13)
+42 error If you need help, you may report this *entire* log,
+42 error including the npm and node versions, at:
+42 error     <http://github.com/npm/npm/issues>
+43 error System Darwin 13.2.0
+44 error command "node" "/usr/local/bin/npm" "publish"
+45 error cwd /Users/tf/dev/don-express
+46 error node -v v0.10.31
+47 error npm -v 1.4.23
+48 verbose exit [ 1, true ]
